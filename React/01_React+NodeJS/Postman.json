@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "a966eaf7-df81-466a-a81f-0b31dd2971eb",
+		"name": "MyAppDB_rn1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24897995"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fullName\": \"张三\",\r\n  \"email\": \"zhangsan@test.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/api/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"zhangsan@test.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImVtYWlsIjoiemhhbmdzYW5AdGVzdC5jb20iLCJpYXQiOjE3NTczOTAxOTEsImV4cCI6MTc1Nzk5NDk5MX0.zi141cF6QHhpWrR7kQ1W-H9x8zNhGrfL3W3VX4Hy0jk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImVtYWlsIjoiemhhbmdzYW5AdGVzdC5jb20iLCJpYXQiOjE3NTczOTAxOTEsImV4cCI6MTc1Nzk5NDk5MX0.zi141cF6QHhpWrR7kQ1W-H9x8zNhGrfL3W3VX4Hy0jk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"第一000篇文章\",\r\n  \"content\": \"这是文章内容\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/api/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImVtYWlsIjoiemhhbmdzYW5AdGVzdC5jb20iLCJpYXQiOjE3NTczOTAxOTEsImV4cCI6MTc1Nzk5NDk5MX0.zi141cF6QHhpWrR7kQ1W-H9x8zNhGrfL3W3VX4Hy0jk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/api/posts"
+			},
+			"response": []
+		}
+	]
+}

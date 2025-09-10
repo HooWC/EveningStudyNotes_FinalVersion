@@ -1,0 +1,25 @@
+.users {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.users h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
